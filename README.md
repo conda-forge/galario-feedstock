@@ -19,14 +19,16 @@ profile) and their comparison to the observations.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/galario-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/galario-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/galario-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/galario-feedstock)
-Windows: ![](https://cdn.rawgit.com/conda-forge/conda-smithy/90845bba35bec53edac7a16638aa4d77217a3713/conda_smithy/static/disabled.svg)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/galario-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/galario-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/galario-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/galario-feedstock)
+![Windows disabled](https://img.shields.io/badge/Windows-disabled-lightgrey.svg)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/galario/badges/version.svg)](https://anaconda.org/conda-forge/galario)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/galario/badges/downloads.svg)](https://anaconda.org/conda-forge/galario)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-galario-green.svg)](https://anaconda.org/conda-forge/galario) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/galario.svg)](https://anaconda.org/conda-forge/galario) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/galario.svg)](https://anaconda.org/conda-forge/galario) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/galario.svg)](https://anaconda.org/conda-forge/galario) |
 
 Installing galario
 ==================
