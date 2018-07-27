@@ -25,7 +25,7 @@ requirements:
     - fftw
     - python
     - cython
-    - numpy
+    - numpy 1.11.*
     - pytest
     - scipy
   run:
