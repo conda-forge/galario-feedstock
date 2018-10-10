@@ -26,6 +26,7 @@ requirements:
     - numpy 1.11.*
     - pytest
     - scipy
+    - cudatoolkit-dev
   run:
     - fftw
     - libgcc  # [osx]
