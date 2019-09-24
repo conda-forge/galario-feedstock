@@ -15,6 +15,8 @@ source:
 build:
   number: 0
   skip: true  # [win]
+  features:
+     - cuda80
 
 requirements:
   build:
@@ -26,7 +28,6 @@ requirements:
     - numpy 1.11.*
     - pytest
     - scipy
-    - cudatoolkit-dev
   run:
     - fftw
     - libgcc  # [osx]
@@ -36,6 +37,7 @@ requirements:
 
 test:
   requires:
+    - cuda80-feature
     - pytest
   imports:
     - galario
