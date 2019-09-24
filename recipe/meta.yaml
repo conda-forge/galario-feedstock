@@ -16,7 +16,7 @@ build:
   number: 1001
   skip: true  # [win]
   features:
-     - cuda80
+     - cuda100
 
 requirements:
   build:
@@ -39,7 +39,6 @@ requirements:
 
 test:
   requires:
-    - cuda80-feature
     - pytest
   imports:
     - galario
