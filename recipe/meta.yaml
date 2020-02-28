@@ -1,16 +1,12 @@
-{% set name = "galario" %}
 {% set version = "1.2.2" %}
-{% set github = "https://github.com/mtazzari/galario" %}
-{% set sha256 = "51ef9d64bfc4a7f5d62371fa8b9d094838485114d582ec7d038d7821454a00c2" %}
 
 package:
-  name: {{ name|lower }}
+  name: galario
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: {{ github }}/archive/v{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://github.com/mtazzari/galario/archive/v{{ version }}.tar.gz
+  sha256: 51ef9d64bfc4a7f5d62371fa8b9d094838485114d582ec7d038d7821454a00c2
 
 build:
   number: 1001
@@ -23,10 +19,10 @@ requirements:
     - {{ compiler('cxx') }}
     - fftw
   host:
-    - fftw
     - python
+    - fftw
     - cython
-    - numpy 1.11.*
+    - numpy
     - pytest
     - scipy
   run:
@@ -46,12 +42,11 @@ test:
   commands:
     - test -d ${PREFIX}/
     - test ${PREFIX}/include/galario.h
-    - test ${PREFIX}/lib/libgalario.so  # [linux]
-    - test ${PREFIX}/lib/libgalario.dylib  # [osx]
+    - test ${PREFIX}/lib/libgalario{{ SHLIB_EXT }}  # [not win]
     - cd python && py.test test_galario.py
 
 about:
-  home: {{ github }}
+  home: https://github.com/mtazzari/galario
   license: LGPL-3.0
   license_family: GPL
   license_file: LICENSE
@@ -63,7 +58,7 @@ about:
     synthetic visibilities given a model image (or an axisymmetric brightness
     profile) and their comparison to the observations.
   doc_url: https://mtazzari.github.io/galario/
-  dev_url: {{ github }}
+  dev_url: https://github.com/mtazzari/galario
 
 extra:
   recipe-maintainers:
