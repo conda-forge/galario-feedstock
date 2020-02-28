@@ -1,7 +1,7 @@
 {% set name = "galario" %}
-{% set version = "1.2.1" %}
+{% set version = "1.2.2" %}
 {% set github = "https://github.com/mtazzari/galario" %}
-{% set sha256 = "585fd37d5c06523cc1d6dfb516ae404a292520950081140e15d0ac56be6134d4" %}
+{% set sha256 = "51ef9d64bfc4a7f5d62371fa8b9d094838485114d582ec7d038d7821454a00c2" %}
 
 package:
   name: {{ name|lower }}
