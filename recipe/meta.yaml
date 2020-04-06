@@ -44,7 +44,8 @@ test:
     - test -d ${PREFIX}/
     - test ${PREFIX}/include/galario.h
     - test ${PREFIX}/lib/libgalario{{ SHLIB_EXT }}  # [not win]
-    - cd python && py.test test_galario.py
+    - cd python && GALARIO_TEST_GPU=1 py.test test_galario.py  # [cuda_compiler_version != "None"]
+    - cd python && py.test test_galario.py  # [cuda_compiler_version == "None"]
 
 about:
   home: https://github.com/mtazzari/galario
