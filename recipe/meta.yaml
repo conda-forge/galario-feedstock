@@ -9,7 +9,7 @@ source:
   sha256: 51ef9d64bfc4a7f5d62371fa8b9d094838485114d582ec7d038d7821454a00c2
 
 build:
-  number: 1001
+  number: 1002
   skip: true  # [win]
 
 requirements:
@@ -17,6 +17,7 @@ requirements:
     - cmake
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+    - {{ compiler('cuda') }}  # [cuda_compiler_version != "None" and not osx]
     - fftw
   host:
     - python
@@ -43,7 +44,8 @@ test:
     - test -d ${PREFIX}/
     - test ${PREFIX}/include/galario.h
     - test ${PREFIX}/lib/libgalario{{ SHLIB_EXT }}  # [not win]
-    - cd python && py.test test_galario.py
+    - cd python && GALARIO_TEST_GPU=1 py.test test_galario.py  # [cuda_compiler_version != "None"]
+    - cd python && py.test test_galario.py  # [cuda_compiler_version == "None"]
 
 about:
   home: https://github.com/mtazzari/galario
