@@ -22,7 +22,7 @@ requirements:
   host:
     - python
     - fftw
-    - cython
+    - cython <3
     - numpy
     - pytest
     - scipy
