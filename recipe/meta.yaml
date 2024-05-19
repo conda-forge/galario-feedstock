@@ -9,13 +9,14 @@ source:
   sha256: 51ef9d64bfc4a7f5d62371fa8b9d094838485114d582ec7d038d7821454a00c2
 
 build:
-  number: 1003
+  number: 1004
   skip: true  # [win]
 
 requirements:
   build:
     - cmake
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
     - fftw
   host:
@@ -28,7 +29,6 @@ requirements:
   run:
     - fftw
     - python
-    - {{ pin_compatible('numpy') }}
     - scipy
 
 test:
